@@ -1,0 +1,15 @@
+﻿@model WebAppMvc.Models.Teacher
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Teacher", "Validation", FormMethod.Post))
+{
+    <div>
+        @Html.EditorForModel()
+    </div>
+    <input type="submit" value="save" />
+}
